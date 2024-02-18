@@ -34,12 +34,13 @@
 }
 
 .main_Config {
-    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* overflow-y: scroll; */
+
+    width: 95%;
+
     gap: 40px;
     margin-top: 30px;
 
@@ -79,20 +80,53 @@
     gap: 70px;
 }
 
-.perfil {
+.perfil, .perfil-fte {
     display: flex;
     flex-direction: row;
-
+    
     align-items: center;
+}
 
+.perfil {
+    justify-content: space-between;
+}
+
+.perfil-fte {
     gap: 5%;
-    /* padding: 10px 20px; */
+}
 
-    /* border-radius: 40px;
-    border: 1px solid #000; */
+.sair-config {
+    margin-right: 5vw;
 
-    /* width: 380px;
-    height: 340px; 400px */
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 1.1em;
+
+    text-decoration: none;
+
+    border: 2px solid #053155;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.sair-config:hover {
+    background-color: #003D73;
+    color: #EAEFF6;
+}
+
+.perfil > a {
+    text-decoration: none;
+    width: auto;
+}
+
+.perfil > a:hover {
+    background-color: #ffffff;
+}
+
+.perfil > a > span {
+    text-transform: none;
 }
 
 .infos-perfil {
@@ -126,7 +160,7 @@ div.span-perfil > span:nth-child(1) {
     display: flex;
     flex-direction: column;
 
-    gap: 30px;
+    gap: 40px;
 }
 
 .txt-perfil label {
@@ -134,13 +168,11 @@ div.span-perfil > span:nth-child(1) {
 }
 
 .perfil img {
-    /* position: absolute; */
+    margin-left: 5vw;
     width: 95px;
-    /* bottom: 230px; */
 }
 
 input[type="text"], input[type="email"] {
-    width: 20vw;
     padding-bottom: 5px;
 
     border: none;
@@ -149,13 +181,15 @@ input[type="text"], input[type="email"] {
     background: none;
 
     color: var(--preto);
-
-    /* font-weight: 600; */
 }
 
-input[type="text"]:focus, input[type="email"]:focus {
-    outline: 0;
+.input-config {
     color: var(--preto);
+    font-weight: normal;
+
+    outline: 0;
+
+    padding-left: 7px;
 }
 
 input[type="text"]::placeholder {
@@ -166,7 +200,6 @@ input[type="text"]::placeholder {
     justify-content: center;
     align-items: center;
 
-    /* width: 373px; */
     width: 25vw;
     border-radius: 16px;
 
@@ -176,14 +209,6 @@ input[type="text"]::placeholder {
     background-color: #003d73;
     cursor: pointer;
 
-}
-
-.div-perfil-config {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    min-width: 50vw;
 }
 
 .config_button:hover {

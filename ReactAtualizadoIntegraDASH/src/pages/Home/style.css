@@ -29,9 +29,9 @@ body {
 .mainHome {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    /* height: 80vh; */
     align-items: center;
+
+    width: 100%;
 }
 
 .titulo_home {
@@ -73,23 +73,12 @@ body {
 
     height: 200px;
 
-    /* margin-top: 60px; */
     border-radius: 20px;
 }
-
-/* .banner-main img {
-    width: 200px;
-} */
 
 .lista-quantidades {
     display: flex;
     justify-content: center;
-    /* height: 75%; */
-    /* width: 100%;
-    flex-direction: row;
-    justify-content: space-between; */
-
-    /* margin: 40px 0 80px 0; */
 }
 
 .cards-iniciais {
@@ -97,8 +86,6 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     gap: 3.5vw;
-
-    /* margin: 20px 0 20px 0; */
 }
 
 .card-inicial {
@@ -113,7 +100,7 @@ body {
     
     border-radius: 10px;
 
-    width: 17.8vw; /* width: 18.5vw; */
+    width: 17.8vw;
     height: 80px;
 }
 
@@ -150,7 +137,7 @@ body {
 .centro {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+
     gap: 100px;
 }
 
@@ -164,21 +151,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     
-    /* gap: 50px; */
-    /* justify-content: space-between; */
 } 
-
-/* 
-.centro-um {
-    justify-content: flex-start;
-    gap: 5vw;
-}
-
-.centro-dois {
-    justify-content: stretch;
-    gap: 10vw;
-} */
-
 
 .linha {
     border: 1px solid #00000011;
@@ -273,9 +246,4 @@ tbody > .tr-alertas:nth-child(odd) {
 .em-bold {
     font-size: 1.5em;
     font-weight: bolder;
-}
-
-.tr-alertas:nth-child(5) {
-    display: flex;
-    align-items: center;
 }

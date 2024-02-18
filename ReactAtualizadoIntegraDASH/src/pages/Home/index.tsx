@@ -64,21 +64,6 @@ function BuscarEstrategias(){
     .catch((error) => console.log(error))
 }
 
-
-// listaAlertas.forEach(item => {
-//      console.log("tamanho: " + listaAlertas.length)
-// });
-
-
-
-// listaAlertas.forEach(item => {
-//      console.log("tamanho: " + listaAlertas.length)
-// });
-
-
-// console.log("lista alertas: " + JSON.stringify(listaAlertas))
-
-
     return (
         <>
             <MenuLateral/>
@@ -143,8 +128,6 @@ function BuscarEstrategias(){
                             <ErrosPlanta erroList={erro}/>
                             <div className="linha"></div>
                             <AlertasHome/>
-                            
-                            {/* centro-dois */}
                         </div>
                     </div>
                 <section className="container-alertas">

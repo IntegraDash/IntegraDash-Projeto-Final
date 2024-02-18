@@ -31,8 +31,8 @@ function Alertas() {
         console.log(response.data);
         setListaAlertas(response.data);
         setListaAlertasModerado(response.data.filter( x => x.status_alerta == "Moderado"))
-        setListaAlertasSerio(response.data.filter( x => x.status_alerta == "Serio"))
-        setListaAlertasCritico(response.data.filter( x => x.status_alerta == "Critico"))
+        setListaAlertasSerio(response.data.filter( x => x.status_alerta == "Sério"))
+        setListaAlertasCritico(response.data.filter( x => x.status_alerta == "Crítico"))
 
 
 
@@ -80,7 +80,7 @@ function Alertas() {
             <div className="card critico" >
             <img src={ IconeCards1 } alt="Icone de erro" />
               <div className="card-conten">
-              <div className="card-name">Erros Criticos</div>
+              <div className="card-name">Erros Críticos</div>
 
                 <div className="number">{alertasCritico.length}</div> 
               </div>
@@ -91,7 +91,7 @@ function Alertas() {
             </div>
             <div className="card urgentes">
             <img src={ IconeCards2 } alt="Icone de erros corrigidos" />
-            <div className="card-name">Erros Sério</div>
+            <div className="card-name">Erros Sérios</div>
               <div className="number">{alertasSerio.length}</div> 
               <div className="icon-box">
                 <i className="fas fa-chalkboard-teacher" />

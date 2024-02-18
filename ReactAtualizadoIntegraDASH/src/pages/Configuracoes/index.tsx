@@ -1,17 +1,14 @@
 import "./styleconfiguracoes.css"
 
 import Perfil from "../../components/Perfil"
-import PerfilImg from "../../assets/img/perfil.png"
+import PerfilImg from "../../assets/img/user.png"
 import MenuLateral from "../../components/MenuLateral"
 import api from "../../utils/api"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 function Configuracoes() {
 
-    const [id, setIDUsuario] = useState<string>("")
-    const [nomeusuario, setNomeusuario] = useState<string>("")
-    const [telefone, setTelefone] = useState<string>("")
-    const [email, setEmail] = useState<string>("")
     const [senha, setSenha] = useState<string>("")
     const [usuarios, setListaUsuarios] = useState({})
 
@@ -50,7 +47,6 @@ function Configuracoes() {
             })
             .catch((error: any) => {
                 console.error('Erro na requisição PUT:', error);
-                alert("Erro ao atualizar. Verifique o console para mais detalhes.");
             });
     }
 
@@ -72,28 +68,25 @@ function Configuracoes() {
                     <h1>Configurações</h1>
                 </section>
                 <section className="main_Config">
-
-                    {/* <h1>Configurações</h1> */}
                     <div className="config-geral">
                         <div className="perfil">
-                            <img src={PerfilImg} alt="Foto de perfil usuário" />
-                            <div className="span-perfil">
-                                {/* <span>Nome de usuário</span> */}
-                                <span>{usuarios.nomeusuario}</span>
-                                <span>{usuarios.email}</span>
+                            <div className="perfil-fte">
+                                <img src={PerfilImg} alt="Foto de perfil usuário" />
+                                <div className="span-perfil">
+                                    <span>{usuarios.nomeusuario}</span>
+                                    <span>{usuarios.email}</span>
+                                </div>
                             </div>
+                            <Link to="/home">
+                                <span className="sair-config">Cancelar e ir para Home</span>
+                            </Link>
                         </div>
                         <form onSubmit={atualizarUsuario} className="infos-perfil">
-                            {/* <!-- <div className="txt-perfil">
-                                    <label for="nome">Nome:</label>
-                                    <label for="email">Email:</label>
-                                    <label for="tel">Telefone:</label>
-                                </div> --> */}
                             <div className="txt-perfil">
-                                <div className="div-perfil-config">
                                     <div className="lbl-input">
                                         <label htmlFor="nome">Nome</label>
                                         <input
+                                            className="input-config"
                                             type="text"
                                             name="nome"
                                             id="nome"
@@ -105,17 +98,9 @@ function Configuracoes() {
                                             }
                                             value={usuarios.nomeusuario} />
                                     </div>
-
-                                    <div className="lbl-input">
-                                        <label htmlFor="id">ID</label>
-                                        <input type="text" name="id" id="id" value={usuarios.id}/>
-                                    </div>
-                                </div>
-
-                                <div className="div-perfil-config">
                                     <div className="lbl-input">
                                         <label htmlFor="email">Email</label>
-                                        <input type="email" name="email" id="email" value={usuarios.email}
+                                        <input className="input-config" type="email" name="email" id="email" value={usuarios.email}
                                             onChange={(e) => {
                                                 setListaUsuarios({
                                                     ...usuarios,
@@ -126,7 +111,7 @@ function Configuracoes() {
 
                                     <div className="lbl-input">
                                         <label htmlFor="tel">Telefone</label>
-                                        <input type="text" name="tel" id="tel" value={usuarios.telefone}
+                                        <input className="input-config" type="text" name="tel" id="tel" value={usuarios.telefone}
                                             onChange={(event) => {
                                                 setListaUsuarios({
                                                     ...usuarios,
@@ -134,9 +119,19 @@ function Configuracoes() {
                                                 })
                                             }} />
                                     </div>
+
+                                    {/* <div className="lbl-input">
+                                        <label htmlFor="id">ID</label>
+                                        <input className="input-config" type="text" name="id" id="id" value={usuarios.id}/>
+                                    </div> */}
+                                <div className="div-perfil-config">
                                 </div>
+
+                                {/* <div className="div-perfil-config">
+                                    
+                                </div> */}
                             </div>
-                            <button type="submit" className="config_button" onClick={editar}>salvar</button>
+                            <button type="submit" className="config_button">salvar</button>
                         </form>
                     </div>
                 </section>

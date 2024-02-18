@@ -140,7 +140,8 @@ form {
 
 .login_senha {
     height: 35px;
-    color: rgba(96, 95, 95, 0.304);
+    /* color: rgba(96, 95, 95, 0.304); */
+    color: #000000;
     background-color: white;
     width: 100%;
     text-indent: 10px;
@@ -149,9 +150,7 @@ form {
 }
 
 
-
-
-.login_email{
+/* .login_email{
     background-color: white;
     height: 35px;
     font-size: 15px;
@@ -159,7 +158,7 @@ form {
     text-indent: 10px;
     border-color: rgba(96, 95, 95, 0.304);
     color: rgba(96, 95, 95, 0.304);
-}
+} */
 
 #email_login{
     background-color: white;
@@ -169,7 +168,7 @@ form {
     text-indent: 10px;
     border: 2px solid rgba(96, 95, 95, 0.304);
     border-color: rgba(96, 95, 95, 0.304);
-    color: rgba(96, 95, 95, 0.304);
+    /* color: rgba(96, 95, 95, 0.304); */
 }
 
 .logindesenvolvido_por {
