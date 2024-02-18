@@ -1,0 +1,64 @@
+CREATE DATABASE integradash;
+
+USE integradash;
+
+CREATE TABLE tb_planta (
+	id BINARY(16) NOT NULL,
+	nomeplanta VARCHAR(255) NOT NULL,
+    endereco_planta VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE tb_erro (
+	id BINARY(16) NOT NULL,
+    nomeerro VARCHAR(255) NOT NULL,
+    data_erro DATE NOT NULL,
+    descricao_erro VARCHAR(500) NOT NULL,
+    status_erro VARCHAR(500) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE tb_planta_erro (
+	id BINARY(16) NOT NULL,
+	id_erro BINARY(16) NOT NULL,
+    id_planta BINARY(16) NOT NULL,
+    descricao VARCHAR(500) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_erro) REFERENCES tb_erro (id),
+    FOREIGN KEY (id_planta) REFERENCES tb_planta (id)
+);
+
+CREATE TABLE tb_alerta (
+	id BINARY(16) NOT NULL,
+    id_erro BINARY(16) NOT NULL,
+    nomealerta VARCHAR(255) NOT NULL,
+    nivel_criticidade CHAR NOT NULL,
+    data_alerta DATE NOT NULL,
+    status_alerta VARCHAR(255) NOT NULL,
+    descricao_alerta VARCHAR(500) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_erro) REFERENCES tb_erro (id)
+);
+
+
+CREATE TABLE tb_usuario (
+	id BINARY(16) NOT NULL,
+    nomeusuario VARCHAR(255) NOT NULL,
+    telefone VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
+CREATE TABLE tb_estrategia (
+	id BINARY(16) NOT NULL,
+    id_usuario BINARY(16) NOT NULL,
+    id_erro BINARY(16) NOT NULL,
+    nomeestrategia VARCHAR(255) NOT NULL,
+    data_estrategia DATE NOT NULL,
+    descricao_estrategia VARCHAR(500) NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT tb_usuario FOREIGN KEY (id_usuario) REFERENCES tb_usuario (id),
+	CONSTRAINT tb_erro FOREIGN KEY (id_erro) REFERENCES tb_erro (id)
+);

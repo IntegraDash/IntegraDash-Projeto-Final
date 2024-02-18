@@ -1,0 +1,15 @@
+
+
+/* ERROS HOME */
+
+.donut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut h2 {
+    color: #000000;
+
+    margin-bottom: 70px;
+}

@@ -1,0 +1,150 @@
+.cards {
+  width: 100%;
+  padding: 35px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.Nometabela {
+  color: #2b0707;
+}
+
+.cards .card {
+  display: flex;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  height: 150px;
+  margin-top: 50px;
+  width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.card img {
+  align-self: flex-end;
+  height: 35px;
+  width: 35px;
+}
+
+.number {
+  font-weight: 500;
+  font-size: 30px;
+  color: #000000;
+}
+
+.MainAlertas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.titulo_analises {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.titulo_analises h1{
+  color: #053155;
+}
+
+.section-main-alertas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 100%;
+  width: 95%;
+
+  gap: 60px;
+  padding: 70px 25px;
+  margin: 30px 0;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 10px 10px 15px 0px #00000025;
+}
+
+.card-name {
+  color: #000000;
+  font-size: 20px;
+}
+
+
+.justify-content-center {
+  justify-content: center!important;
+  margin-top: 15%;
+}
+
+.icon-box i {
+  margin-top: 20px;
+  font-size: 2em;
+  color: #007bff;
+}
+
+.cards .critico {
+  background-color: #f90000;
+}
+
+.cards .urgentes {
+  background-color: #fff702;
+}
+
+.cards .normais {
+  background-color: #ff9500;
+}
+
+.mt-5 {
+  margin-top: 3rem!important;
+  margin-bottom: 30px;
+}
+
+.mainCards {
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+}
+
+.img {
+  display: flex;
+  width: 70px;
+}
+
+@media screen and (max-width: 796px) {
+  body {
+      /* width: 100%; */
+      background-size: 100% 70%;
+      /* flex-direction: row-reverse; */
+  }
+  root {
+      width: 100%;
+      background-size: 100% 70%;
+      flex-direction: row-reverse;
+  }
+  .cards .card {
+      /* width: 100%; */
+      background-size: 100% 70%;
+      max-width: 100%;
+      padding: 10px;
+      /* flex-direction: row-reverse; */
+  }
+  .cards {
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+  }
+  .card-body {
+      max-width: 100%;
+      padding: 10px;
+  }
+}

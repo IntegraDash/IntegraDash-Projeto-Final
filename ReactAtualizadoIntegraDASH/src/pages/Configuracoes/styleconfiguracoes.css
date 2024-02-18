@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: var(--branco);
+}
+
+:root {
+    --azulC: #003D73;
+    --azulE: #053155;
+    --azulBB: #1B77C2;
+    --branco: #ffffff;
+    --verde: #4ECB71;
+    --preto: #000000;
+    --azulBranco: #EAEFF6;
+}
+
+.body {
+      width: 95%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+/* MAIN */
+
+.main_pageconfig {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_Config {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* overflow-y: scroll; */
+    gap: 40px;
+    margin-top: 30px;
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px 0px #00000025;
+     
+}
+
+.main_Config h1 {
+    align-self: center;
+
+    font-size: 2.3em;
+    color: var(--preto);
+}
+
+.titulo_configuracoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.titulo_configuracoes h1 {
+    color: #053155;
+}
+
+.config-geral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    margin-top: 30px;
+    
+    width: 90vw;
+    gap: 70px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 5%;
+    /* padding: 10px 20px; */
+
+    /* border-radius: 40px;
+    border: 1px solid #000; */
+
+    /* width: 380px;
+    height: 340px; 400px */
+}
+
+.infos-perfil {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+}
+
+.span-perfil {
+    display: flex;
+    flex-direction: column;
+    min-width: 15vw;
+}
+
+div.span-perfil > span {
+    text-transform: none;
+}
+
+div.span-perfil > span:nth-child(1) {
+    font-size: 1.3em;
+    font-weight: 900;
+}
+
+.lbl-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-perfil {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.txt-perfil label {
+    color: var(--preto);
+}
+
+.perfil img {
+    /* position: absolute; */
+    width: 95px;
+    /* bottom: 230px; */
+}
+
+input[type="text"], input[type="email"] {
+    width: 20vw;
+    padding-bottom: 5px;
+
+    border: none;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.364);
+
+    background: none;
+
+    color: var(--preto);
+
+    /* font-weight: 600; */
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    outline: 0;
+    color: var(--preto);
+}
+
+input[type="text"]::placeholder {
+    color: var(--preto);
+}
+
+.config_button {
+    justify-content: center;
+    align-items: center;
+
+    /* width: 373px; */
+    width: 25vw;
+    border-radius: 16px;
+
+    margin: 40px auto 40px auto;
+    padding: 10px;
+    gap: 10px;
+    background-color: #003d73;
+    cursor: pointer;
+
+}
+
+.div-perfil-config {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 50vw;
+}
+
+.config_button:hover {
+    background-color: #003d73da;
+    color: #f0e2e2;
+}
+
+.main_Config h1, .main_Config span, input[type="text"]::placeholder, .main_Config button {
+    text-transform: uppercase;
+}
+
+.main_Config h1, .main_Config span, input[type="text"]::placeholder {
+    color: var(--preto);
+}
+

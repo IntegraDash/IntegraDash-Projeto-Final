@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.main_login {
+    width: 100%;
+    height: 100%;
+}
+
+.login_paginatotal {
+    height: 100vh;
+    width: 100vw;
+    background-color: #053155;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login_rapaz_dashboard {
+    height: 96%;
+    width: 96%;
+}
+
+.login_rapaz_dashboard img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.login_quadrado_branco {
+    height: 100vh;
+    width: 45%;
+    background-color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.login_pagina_metade1 {
+    display: flex;
+    width: 55%;
+    /* height: 100%; */
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.Logo_Login {
+    width: 32%;
+    margin-top: 10%;
+}
+
+
+
+.clique_aqui_login {
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+    color: gray;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.clique_aqui_login a {
+    margin-left: 5px;
+    color: #053155;
+    text-decoration: none;
+    /* width: 136%; */
+    font-weight: 800;
+    font-size: 12px;
+}
+
+/* 
+.alinhamento_login {
+    display: flex;
+    flex-direction: column;
+} */
+
+.alinhamento_input {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.negrito {
+    color: black;
+    font-weight: 900;
+    font-size: 90%;
+}
+
+form {
+    padding-bottom: 10px;
+
+}
+
+::placeholder {
+    color: rgb(162, 162, 162);
+    font-size: 15px;
+}
+
+.login_botao_entrar {
+    background-color: #1b77c2;
+    color: #e8e8e8;
+    height: 40px;
+    width: 100%;
+    font-size: 90%;
+    border: none;
+}
+
+
+.zoinho {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
+}
+
+.testefonte {
+    display: flex;
+    font-size: 80%;
+    width: 65%;
+}
+
+.testefonte2 {
+
+    display: none;
+
+}
+
+.botao_entrar:hover {
+    background-color: #3b6689;
+
+}
+
+
+.login_senha {
+    height: 35px;
+    color: rgba(96, 95, 95, 0.304);
+    background-color: white;
+    width: 100%;
+    text-indent: 10px;
+    font-size: 15px;
+    border-color: rgba(96, 95, 95, 0.304);
+}
+
+
+
+
+.login_email{
+    background-color: white;
+    height: 35px;
+    font-size: 15px;
+    width: 100%;
+    text-indent: 10px;
+    border-color: rgba(96, 95, 95, 0.304);
+    color: rgba(96, 95, 95, 0.304);
+}
+
+#email_login{
+    background-color: white;
+    height: 35px;
+    font-size: 15px;
+    width: 100%;
+    text-indent: 10px;
+    border: 2px solid rgba(96, 95, 95, 0.304);
+    border-color: rgba(96, 95, 95, 0.304);
+    color: rgba(96, 95, 95, 0.304);
+}
+
+.logindesenvolvido_por {
+    width: 80%;
+}
+
+
+
+.Logo_Claro {
+    display: none;
+}
+
+/* .zoio {
+
+    position: relative;
+    height: 10%;
+    width: 10%;
+
+    } */
+
+.login_zoio {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    left: 265px;
+    bottom: 4px;
+}
+
+.teste1 {
+    height: 60%;
+    width: 50%;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    color: black;
+}
+
+label {
+    color: black;
+    padding: 5px;
+    position: relative;
+    z-index: 70;
+}
+
+.mantenha-me_login {
+    padding-bottom: 30px;
+    font-size: 15px;
+    color: gray;
+    width: 100%;
+}
+
+.checkbox {
+    display: flex;
+    color: white;
+    background-color: white;
+}
+
+.testezoom {
+
+    width: 100%;
+    height: 100%;
+}
+
+.desenvolvido {
+    margin-top: auto;
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 950px) {
+
+    .Logo_Login {
+        width: 32%;
+        margin-top: 10%;
+    }
+}
+
+
+
+.quadrado_branco {
+    width: 100%;
+
+}
+
+.pagina_metade1 {
+    display: none;
+
+}
+
+.quadrado_branco {
+    background-image: url(img/fundomobile\ 1.png);
+    background-size: 100vw 70%;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.Logo_Integradash {
+    display: none;
+}
+
+.Logo_Claro {
+    display: flex;
+    max-width: 250px;
+    margin-top: 100px;
+    margin-left: 30px;
+
+}
+
+.alinhamento_input {
+    margin-top: 20px;
+}
+
+.negrito {
+    font-weight: 900;
+    font-size: 90%;
+}
+
+/* TESTE PARA ALTERAR O TEXTO CONFORME DIMINUI A TELA */
+
+.testefonte {
+    display: flex;
+    font-size: 80%;
+}
+
+.testefonte2 {
+    display: none;
+    /*flex*/
+}
+
+.desenvolvido {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
