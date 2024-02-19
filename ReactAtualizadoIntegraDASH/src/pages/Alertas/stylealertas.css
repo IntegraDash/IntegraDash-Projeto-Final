@@ -93,15 +93,15 @@
 }
 
 .cards .critico {
-  background-color: #f90000;
+  background-color: #FF0000;
 }
 
 .cards .urgentes {
-  background-color: #fff702;
+  background-color: #fcec4f;
 }
 
 .cards .normais {
-  background-color: #ff9500;
+  background-color: #FFA500;
 }
 
 .mt-5 {
@@ -112,7 +112,6 @@
 .mainCards {
   display: flex;
   flex-direction: column;
-  padding-right: 40px;
 }
 
 .img {

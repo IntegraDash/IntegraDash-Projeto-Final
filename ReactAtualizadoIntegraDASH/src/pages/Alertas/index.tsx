@@ -30,9 +30,9 @@ function Alertas() {
       .then((response) => {
         console.log(response.data);
         setListaAlertas(response.data);
-        setListaAlertasModerado(response.data.filter( x => x.status_alerta == "Moderado"))
-        setListaAlertasSerio(response.data.filter( x => x.status_alerta == "Sério"))
-        setListaAlertasCritico(response.data.filter( x => x.status_alerta == "Crítico"))
+        setListaAlertasModerado(response.data.filter( x => x.nivel_criticidade == "Moderado"))
+        setListaAlertasSerio(response.data.filter( x => x.nivel_criticidade == "Sério"))
+        setListaAlertasCritico(response.data.filter( x => x.nivel_criticidade == "Crítico"))
 
 
 
@@ -40,18 +40,18 @@ function Alertas() {
       .catch((error) => console.log(error));
   }, []);
 
-  useEffect(() => {
-    const handleKeyUp = (e) => {
-      setExpressao(e.target.value.toLowerCase());
-    };
+  // useEffect(() => {
+  //   const handleKeyUp = (e) => {
+  //     setExpressao(e.target.value.toLowerCase());
+  //   };
 
-    const inputBusca = document.getElementById('inputBusca');
-    inputBusca.addEventListener('keyup', handleKeyUp);
+  //   const inputBusca = document.getElementById('inputBusca');
+  //   inputBusca.addEventListener('keyup', handleKeyUp);
 
-    return () => {
-      inputBusca.removeEventListener('keyup', handleKeyUp);
-    };
-  }, []);
+  //   return () => {
+  //     inputBusca.removeEventListener('keyup', handleKeyUp);
+  //   };
+  // }, []);
 
   const handlePaginaAnterior = () => {
     setPaginaAtual((prev) => Math.max(prev - 1, 1));
@@ -72,7 +72,7 @@ function Alertas() {
       <Perfil />
       <main className="MainAlertas">
         <section className="titulo_analises">
-          <h1>Análises</h1>
+          <h1>Alertas</h1>
         </section>
       <section className="section-main-alertas">
         <section className="mainCards">
@@ -111,23 +111,23 @@ function Alertas() {
             </div>
             <div className="card card-body mt-5">
               <h1 className="Nometabela">Gerenciamento de Alertas</h1>
-              <input
+              {/* <input
                 id="inputBusca"
                 type="text"
                 className="form-control mt-3 mb-3"
                 placeholder="O que você procura?"
                 value={expressao}
                 onChange={(e) => setExpressao(e.target.value)}
-              />
+              /> */}
               <table className="table table-hover table-striped">
                 <thead className="table-dark">
                   <tr>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Nivel de criticidade</th>
-                    <th>Data</th>
                     <th>Status</th>
-                    <th>identificador do erro relacionado</th>
+                    <th>Data</th>
+                    
                   </tr>
                 </thead>
                 <tbody id="tabela-alertas">
@@ -136,9 +136,8 @@ function Alertas() {
                       <td data-cell="nome">{alerta.nomealerta}</td>
                       <td data-cell="descrição">{alerta.descricao_alerta}</td>
                       <td data-cell="status">{alerta.status_alerta}</td>
-                      <td data-cell="data">{new Date(alerta.data_alerta).toLocaleDateString()}</td>
                       <td id="centralizar" data-cell="nivel de criticidade">{alerta.nivel_criticidade}</td>
-                      <td data-cell="identificador do erro relacionado">{alerta.erro.id}</td>
+                      <td data-cell="data">{new Date(alerta.data_alerta).toLocaleDateString()}</td>
                     </tr>
                   ))}
                 </tbody>

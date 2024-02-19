@@ -21,7 +21,7 @@ export default function Home() {
     const [ListaErros, setListaErros] = useState([]);
     const [ListaErrosResolvidos, setListaErrosResolvidos] = useState([]);
     const [ListaEstrategias, setListaEstrategias] = useState([]);
-
+    
 useEffect(() => {
   // Atualiza o título do documento usando a API do browser
   BuscarAlertas()
@@ -46,8 +46,9 @@ function BuscarErros(){
     .get("http://localhost:8080/erro")
     .then((response) => {
         console.log(response.data)
-        setListaErros(response.data.filter( x => x.status_erro == "Ativo"))
-        setListaErrosResolvidos(response.data.filter( x => x.status_erro != "Ativo"))
+        setListaErros(response.data.filter( x => x.status_erro != "Solucionado"))
+        setListaErrosResolvidos(response.data.filter( x => x.status_erro == "Solucionado"))
+        
 
     })
     .catch((error) => console.log(error))
@@ -81,7 +82,7 @@ function BuscarEstrategias(){
                                 <img src={ IconeCards1 } alt="Icone de erro" />
                                 <div className="quantidade">
                                     <span>Quantidade de Erros</span>
-                                    <p>{ ListaErros.length }</p>
+                                    <p>{ ListaErros.length + ListaErrosResolvidos.length }</p>
                                 </div>
                             </div>
                             <div className="card-inicial">
@@ -139,9 +140,9 @@ function BuscarEstrategias(){
                                 <th>Nome</th>
                                 <th>Descrição</th>
                                 <th>Status</th>
-                                <th>Data</th>
                                 <th>Nível de criticidade</th>
-                                <th>Identificador do erro relacionado</th>
+                                <th>Data</th>
+                                
                             </tr>
                         </thead>
                         <tbody id="corpo-tabela">
@@ -152,9 +153,8 @@ function BuscarEstrategias(){
                                 <td data-cell="nome" key={index}>{alerta.nomealerta}</td>
                                 <td data-cell="descrição" key={index}>{alerta.descricao_alerta}</td>
                                 <td data-cell="status" key={index}>{alerta.status_alerta}</td>
-                                <td data-cell="data" key={index}>{new Date(alerta.data_alerta).toLocaleDateString()}</td>
                                 <td id="centralizar" data-cell="nivel de criticidade" key={index}>{alerta.nivel_criticidade}</td>
-                                <td data-cell="identificador do erro relacionado" key={index}>{alerta.erro.id}</td>
+                                <td data-cell="data" key={index}>{new Date(alerta.data_alerta).toLocaleDateString()}</td>
                             </tr>
                             })
                     }

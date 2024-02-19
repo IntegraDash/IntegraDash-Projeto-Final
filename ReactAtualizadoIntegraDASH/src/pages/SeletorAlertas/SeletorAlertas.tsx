@@ -25,7 +25,7 @@ const SeletorAlertas: React.FC = () => {
   return (
     <section className='seletor_alertas'>
       <section className='posicionamento_seletor'>
-        <h2 className='em-bold'>Alertas - Status Mensal</h2>
+        <h2 className='em-bold'>Alertas</h2>
         <div className='posicionamento_btn'>
           <button className='btn_graf' onClick={() => handleSelecionarComponente(<LinhaExemplo />)}>
             Ano

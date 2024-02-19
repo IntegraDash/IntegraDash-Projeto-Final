@@ -103,7 +103,7 @@ function Login() {
                                 </div>
                                 <div className="mantenha-me_login">
                                     <input className="checkbox" type="checkbox" name="checkbox" />
-                                    <label htmlFor="">Mantenha-me conectado</label>
+                                    <label htmlFor=""></label>
                                 </div>
                                 <button className="login_botao_entrar" type="submit">Entrar</button>
                                 <div className="clique_aqui_login">

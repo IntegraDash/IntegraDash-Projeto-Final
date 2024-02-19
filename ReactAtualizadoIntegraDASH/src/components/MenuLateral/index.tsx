@@ -45,7 +45,7 @@ export default function MenuLateral() {
                             <span className="icon1">
                                 <img src={AnalisesBranco} alt="" />
                             </span>
-                            <span className="title">Analises</span>
+                            <span className="title">Análises</span>
                         </Link>
                     </li>
                     <li className="list">

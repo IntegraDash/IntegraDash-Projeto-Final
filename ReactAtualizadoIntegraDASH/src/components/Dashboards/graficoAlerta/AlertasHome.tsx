@@ -19,11 +19,11 @@ function AlertasHome() {
           const filterList : any = [];
   
           response.data.map( (item: any) => {
-              let positionStatus = filterList.findIndex( (st) => st.status === item.status_alerta);
+              let positionStatus = filterList.findIndex( (st) => st.status === item.nivel_criticidade);
   
               if( positionStatus == -1){
                 filterList.push({
-                  status: item.status_alerta,
+                  status: item.nivel_criticidade,
                   contagem: 1
                 })
                   
@@ -55,8 +55,8 @@ function AlertasHome() {
     setOptions((prevOptions) => ({
       ...prevOptions,
       labels: testea,
-      colors: ['#19A755', '#FABC41', '#F90C0C'],
-      dataLabels: {
+      colors: ['#fcec4f', '#FF0000', '#FFA500'],
+      dataLabels: { 
         enabled: true,
         formatter: function (val: any, opts: any) {
           return `${val.toFixed(1)}%`;
@@ -72,7 +72,7 @@ function AlertasHome() {
 
   return (
     <div className="donut">
-      <h2 className='em-bold'>Alertas - Status Mensal</h2>
+      <h2 className='em-bold'>Alertas</h2>
       <Chart options={options} series={series} type="donut" width="400" />
     </div>
   );

@@ -17,16 +17,16 @@
 }
 
 .dropdown_perfil {
-    display: inline-block;
-    position: absolute;
-    outline: none;
-    /* margin: 10px; */
-    width: 8%;
-    left: 91%;
-    height: 11%;
-    background: #003D73;
-    width: 9%;
-    border-bottom-left-radius: 40px;
+  display: inline-block;
+  position: absolute;
+  outline: none;
+  /* margin: 10px; */
+  width: 8%;
+  left: 91%;
+  height: 11%;
+  background: #003D73;
+  width: 9%;
+  border-bottom-left-radius: 40px;
   }
   
   .dropdown1_perfil {
@@ -74,17 +74,17 @@
   }
   
   .dropbtn_perfil img {
-    width: 10%;
+    width: 7%;
   }
 
   .dropbtn_perfil span {
     color: var(--branco);
-    font-size:x-large;
+    font-size: large;
     text-decoration: none;
   }
   
   .dropbtn img {
-    width: 100%;
+    width: 80%;
   }
   
   /* dd content */
