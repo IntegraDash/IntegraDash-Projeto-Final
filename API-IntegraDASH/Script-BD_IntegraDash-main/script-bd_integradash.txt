@@ -32,7 +32,7 @@ CREATE TABLE tb_alerta (
 	id BINARY(16) NOT NULL,
     id_erro BINARY(16) NOT NULL,
     nomealerta VARCHAR(255) NOT NULL,
-    nivel_criticidade CHAR NOT NULL,
+    nivel_criticidade VARCHAR(255) NOT NULL,
     data_alerta DATE NOT NULL,
     status_alerta VARCHAR(255) NOT NULL,
     descricao_alerta VARCHAR(500) NOT NULL,

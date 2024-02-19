@@ -13,6 +13,7 @@ import ConfiguracoesAzul from "../../assets/img/iconConfiguracoesBlue.svg"
 import ConfiguracoesBranco from "../../assets/img/branco_configuracao_icone.png"
 import SairAzul from "../../assets/img/iconSairBlue.svg"
 import SairBranco from "../../assets/img/branco_sair_icone.png"
+import Integra from "../../assets/img/integra.png"
 
 import "./styleperfil.css"
 
@@ -44,7 +45,7 @@ export default function Perfil() {
             <aside className="dropdown_perfil" tabIndex={1}>
                     <i className="db2_perfil" tabIndex={1} />
                     <a className="dropbtn_perfil">
-                        {/* <img src={SairBranco} alt="" /> */}
+                        <img src={Integra} alt="" />
                         <span>{usuarios.nomeusuario}</span>
                     </a>
                     <div className="dropdown-content_perfil">

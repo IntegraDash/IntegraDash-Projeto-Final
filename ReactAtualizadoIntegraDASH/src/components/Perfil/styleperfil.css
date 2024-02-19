@@ -61,7 +61,7 @@
     height: 100%;
     border-radius: 12px;
     justify-content: space-around;
-    flex-direction: column;
+    flex-direction: row;
     /* margin-left: 40px; */
     border-bottom-left-radius: 40px;
     text-decoration: none;
@@ -73,6 +73,10 @@
     text-decoration: none;
   }
   
+  .dropbtn_perfil img {
+    width: 10%;
+  }
+
   .dropbtn_perfil span {
     color: var(--branco);
     font-size:x-large;
@@ -80,7 +84,7 @@
   }
   
   .dropbtn img {
-    width: 40px;
+    width: 100%;
   }
   
   /* dd content */
