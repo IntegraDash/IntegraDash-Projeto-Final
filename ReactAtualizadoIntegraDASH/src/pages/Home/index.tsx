@@ -152,7 +152,7 @@ function BuscarEstrategias(){
                                 <td data-cell="nome" key={index}>{alerta.nomealerta}</td>
                                 <td data-cell="descrição" key={index}>{alerta.descricao_alerta}</td>
                                 <td data-cell="status" key={index}>{alerta.status_alerta}</td>
-                                <td data-cell="data" key={index}>{alerta.data_alerta}</td>
+                                <td data-cell="data" key={index}>{new Date(alerta.data_alerta).toLocaleDateString()}</td>
                                 <td id="centralizar" data-cell="nivel de criticidade" key={index}>{alerta.nivel_criticidade}</td>
                                 <td data-cell="identificador do erro relacionado" key={index}>{alerta.erro.id}</td>
                             </tr>

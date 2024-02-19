@@ -136,7 +136,7 @@ function Alertas() {
                       <td data-cell="nome">{alerta.nomealerta}</td>
                       <td data-cell="descrição">{alerta.descricao_alerta}</td>
                       <td data-cell="status">{alerta.status_alerta}</td>
-                      <td data-cell="data">{alerta.data_alerta}</td>
+                      <td data-cell="data">{new Date(alerta.data_alerta).toLocaleDateString()}</td>
                       <td id="centralizar" data-cell="nivel de criticidade">{alerta.nivel_criticidade}</td>
                       <td data-cell="identificador do erro relacionado">{alerta.erro.id}</td>
                     </tr>

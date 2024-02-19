@@ -204,7 +204,7 @@ export default function Estrategia() {
                     return <tr className="tr-estrategias">
                       <td data-cell="nome" key={index}>{estrategias.nomeestrategia}</td>
                       <td data-cell="descrição" key={index}>{estrategias.descricao_estrategia}</td>
-                      <td data-cell="data" key={index}>{estrategias.data_estrategia}</td>
+                      <td data-cell="data" key={index}>{new Date(estrategias.data_estrategia).toLocaleDateString()}</td>
                     </tr>
                   })
                 }
