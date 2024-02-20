@@ -6,6 +6,7 @@ import ErrosDia from '../../components/Dashboards/graficoErro/ErroDia';
 import ErrosMes from '../../components/Dashboards/graficoLinha/ErrosMes';
 
 import "../Texte/styletexte.css"
+import Segundo from '../../components/Dashboards/graficoLinha/Segundo';
 
 const App: React.FC = () => {
   const [componenteSelecionado, setComponenteSelecionado] = useState<ReactElement | null>(null);
@@ -25,11 +26,8 @@ const App: React.FC = () => {
         <button className='btn_graf' onClick={() => handleSelecionarComponente(<ErrosPeriodo />)}>
           Ano
         </button>
-        <button className='btn_graf' onClick={() => handleSelecionarComponente(<ErrosMes />)}>
+        <button className='btn_graf' onClick={() => handleSelecionarComponente(<Segundo />)}>
           Mês
-        </button>
-        <button className='btn_graf' onClick={() => handleSelecionarComponente(<ErroDias />)}>
-          Dia
         </button>
       </div>
       <div>

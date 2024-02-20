@@ -1,0 +1,47 @@
+
+
+
+.em-bold_erro {
+    color: #000000;
+    margin-bottom: 2%;
+}
+
+.posicionamento_erro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.buttons_erro {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons_erro button {
+    padding: 0 10px;
+    margin: 0 2%;
+    background-color: #003D73;
+    color: antiquewhite;
+}
+
+.filters {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.year-filter,
+.month-filter,
+.day-filter {
+    margin-right: 1%;
+}
+
+.select,
+.year-filter select,
+.month-filter select,
+.day-filter select {
+    background-color: #003D73;
+    color: antiquewhite;
+}

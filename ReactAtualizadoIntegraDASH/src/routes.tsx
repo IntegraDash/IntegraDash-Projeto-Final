@@ -18,6 +18,9 @@ import Alertas from "./pages/Alertas";
 import Exemplo from "./pages/Exemplo/Exemplo";
 import Exemplo2 from "./pages/Exemplo2/Exemplo2";
 import ExeTeste from "./pages/LinhaExemplo/ExeTeste";
+import Primeiro from "./components/Dashboards/graficoLinha/Primeiro";
+import Segundo from "./components/Dashboards/graficoLinha/Segundo";
+import Terceiro from "./components/Dashboards/graficoLinha/Terceiro";
 
 
 function MainRoutes() {
