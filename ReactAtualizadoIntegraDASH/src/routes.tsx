@@ -17,6 +17,8 @@ import Restauracao from "./pages/Restauracao";
 import Alertas from "./pages/Alertas";
 import Exemplo from "./pages/Exemplo/Exemplo";
 import Exemplo2 from "./pages/Exemplo2/Exemplo2";
+import ExeTeste from "./pages/LinhaExemplo/ExeTeste";
+
 
 function MainRoutes() {
 
