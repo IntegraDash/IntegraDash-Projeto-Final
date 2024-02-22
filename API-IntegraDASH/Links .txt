@@ -46,3 +46,19 @@ MOBILE
 BANCO DE DADOS - ARQUIVO EXPORTADO
 
 https://drive.google.com/file/d/1PmGAvzZqHQMPu7nBeqDZI_aArNiq8o6e/view?usp=classroom_web&authuser=0
+
+
+-------------------------------------------------------
+
+REPOSITÓRIOS
+
+
+MOBILE 
+
+https://github.com/IntegraDash/MobileFuncionalFinal
+
+
+API, FRONTEND, SCRIPT BANCO E INSOMNIA 
+
+https://github.com/IntegraDash/IntegraDash-Projeto-Final
+
